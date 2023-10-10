@@ -18,6 +18,12 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
 
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]+" title="Phone number cannot contain letters"><br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        
         <label for="country">Country:</label>
         <select id="country" name="country">
             <option value="usa">United States</option>
@@ -25,20 +31,15 @@
             <option value="uk">United Kingdom</option>
             <option value="India">India</option>
         </select><br><br>
-
-        <label for="address">Address:</label>
-        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
-
         <label for="gender">Gender:</label>
         <input type="radio" id="male" name="gender" value="male" required>
         <label for="male">Male</label>
         <input type="radio" id="female" name="gender" value="female" required>
         <label for="female">Female</label>
         <br><br>
+        
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]+" title="Phone number cannot contain letters"><br><br>
-
+        
         <input type="submit" value="Register">
     </form>
     <script type="text/javascript">
