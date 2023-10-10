@@ -10,7 +10,7 @@
     
     <form action="registration_f" method="POST" onsubmit="myfunc(event)">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="Name cannot contain numbers"><br><br>
+        <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="Name cannot contain numbers" onkeyup="lettersOnly(this)"><br><br>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
@@ -19,7 +19,7 @@
         <input type="password" id="password" name="password" required><br><br>
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]+" title="Phone number cannot contain letters"><br><br>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]+" title="Phone number cannot contain letters" onkeyup="numbersOnly(this)"><br><br>
 
         <label for="address">Address:</label>
         <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
@@ -43,6 +43,14 @@
         <input type="submit" value="Register">
     </form>
     <script type="text/javascript">
+        function lettersOnly(input) {
+            var regex = /[^a-z]/gi;
+            input.value = input.value.replace(regex, "");
+        }
+        function numbersOnly(input) {
+            var regex = /[^0-9]/gi;
+            input.value = input.value.replace(regex, "");
+        }
         function myfunc(event){
             event.preventDefault();
 
