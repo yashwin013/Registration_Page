@@ -10,19 +10,19 @@
     
     <form action="registration_f" method="POST" onsubmit="myfunc(event)">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="Name cannot contain numbers" onkeyup="lettersOnly(this)"><br><br>
+        <input type="text" id="name" name="name" placeholder="Name" onkeyup="lettersOnly(this)"><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" placeholder="Email" required><br><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br><br>
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]+" title="Phone number cannot contain letters" onkeyup="numbersOnly(this)"><br><br>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" click="numbersOnly(this)"><br><br>
 
         <label for="address">Address:</label>
-        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        <textarea id="address" name="address" rows="4" cols="50" required placeholder="Address"></textarea><br><br>
         
         <label for="country">Country:</label>
         <select id="country" name="country">
@@ -40,7 +40,9 @@
         
 
         
-        <input type="submit" value="Register">
+        <div class="button">
+            <input type="submit" value="Register">
+          </div>
     </form>
     <script type="text/javascript">
         function lettersOnly(input) {
